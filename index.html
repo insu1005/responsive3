@@ -8,9 +8,34 @@
 
     <link rel="stylesheet" href="css/common.css" />
 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
 
     <link rel="stylesheet" href="css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $(".all-menu-open").on("click", function () {
+          $(".gnb-m").css({
+            right: "0px",
+          });
+        });
+
+        $(".all-menu-close").on("click", function () {
+          $(".gnb-m").css({
+            right: "-100%",
+          });
+        });
+
+        $(".gnb-m-wrap .depth1 > a").on("click", function () {
+          $(this).next().show();
+        });
+      });
+    </script>
   </head>
   <body>
     <aside class="skip-nav">
@@ -88,50 +113,52 @@
             <i class="xi-bars"></i>
           </button>
           <div class="gnb-m">
-            <ul>
-              <li class="depth1">
-                <a href="#">관람 참여</a>
-                <ul class="depth2">
-                  <li><a href="#">서울</a></li>
-                  <li><a href="#">과천</a></li>
-                  <li><a href="#">덕수궁</a></li>
-                  <li><a href="#">청주</a></li>
-                </ul>
-              </li>
-              <li class="depth1">
-                <a href="#">전시</a>
-                <ul class="depth2">
-                  <li><a href="#">현재전시</a></li>
-                  <li><a href="#">예정전시</a></li>
-                  <li><a href="#">과거전시</a></li>
-                </ul>
-              </li>
-              <li class="depth1">
-                <a href="#">소장품</a>
-                <ul class="depth2">
-                  <li><a href="#">소장품 검색</a></li>
-                  <li><a href="#">소장품 탐색</a></li>
-                  <li><a href="#">보존과학</a></li>
-                </ul>
-              </li>
-              <li class="depth1">
-                <a href="#">미술연구</a>
-                <ul class="depth2">
-                  <li><a href="#">아카이브</a></li>
-                  <li><a href="#">연구</a></li>
-                  <li><a href="#">발간자료</a></li>
-                </ul>
-              </li>
-              <li class="depth1">
-                <a href="#">디지털미술관</a>
-                <ul class="depth2">
-                  <li><a href="#">메인</a></li>
-                  <li><a href="#">맞춤검색</a></li>
-                  <li><a href="#">오디오가이드</a></li>
-                  <li><a href="#">이용자갤러리</a></li>
-                </ul>
-              </li>
-            </ul>
+            <div class="gnb-m-wrap">
+              <ul>
+                <li class="depth1">
+                  <a href="#">관람 참여</a>
+                  <ul class="depth2">
+                    <li><a href="#">서울</a></li>
+                    <li><a href="#">과천</a></li>
+                    <li><a href="#">덕수궁</a></li>
+                    <li><a href="#">청주</a></li>
+                  </ul>
+                </li>
+                <li class="depth1">
+                  <a href="#">전시</a>
+                  <ul class="depth2">
+                    <li><a href="#">현재전시</a></li>
+                    <li><a href="#">예정전시</a></li>
+                    <li><a href="#">과거전시</a></li>
+                  </ul>
+                </li>
+                <li class="depth1">
+                  <a href="#">소장품</a>
+                  <ul class="depth2">
+                    <li><a href="#">소장품 검색</a></li>
+                    <li><a href="#">소장품 탐색</a></li>
+                    <li><a href="#">보존과학</a></li>
+                  </ul>
+                </li>
+                <li class="depth1">
+                  <a href="#">미술연구</a>
+                  <ul class="depth2">
+                    <li><a href="#">아카이브</a></li>
+                    <li><a href="#">연구</a></li>
+                    <li><a href="#">발간자료</a></li>
+                  </ul>
+                </li>
+                <li class="depth1">
+                  <a href="#">디지털미술관</a>
+                  <ul class="depth2">
+                    <li><a href="#">메인</a></li>
+                    <li><a href="#">맞춤검색</a></li>
+                    <li><a href="#">오디오가이드</a></li>
+                    <li><a href="#">이용자갤러리</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
             <button type="button" class="all-menu-close">
               <i class="xi-close"></i>
             </button>
@@ -139,7 +166,61 @@
         </nav>
       </header>
       <main class="container" id="container">
-        <section class="visual"></section>
+        <h2 class="hidden">메인콘텐츠</h2>
+        <section class="visual">
+          <header class="visual-header">
+            <h3 class="tit">현대 미술관</h3>
+            <p class="desc">
+              National Museum of Modern and Contemporary Art, Korea
+            </p>
+          </header>
+          <article class="visual-article">
+            <div class="visual-box">
+              <h4 class="visual-tit"><em>서울</em>현대 미술관</h4>
+              <p class="visual-desc">서울 종로구 삼청로 30 : 10:00–18:00</p>
+              <ul class="visual-list">
+                <li><a href="#">전시</a></li>
+                <li><a href="#">필름앤비디오</a></li>
+                <li><a href="#">다원예술</a></li>
+                <li><a href="#">교육</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </div>
+            <div class="visual-box">
+              <h4 class="visual-tit"><em>과천</em>현대 미술관</h4>
+              <p class="visual-desc">서울 종로구 삼청로 30 : 10:00–18:00</p>
+              <ul class="visual-list">
+                <li><a href="#">전시</a></li>
+                <li><a href="#">필름앤비디오</a></li>
+                <li><a href="#">다원예술</a></li>
+                <li><a href="#">교육</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </div>
+            <div class="visual-box">
+              <h4 class="visual-tit"><em>덕수궁</em>현대 미술관</h4>
+              <p class="visual-desc">서울 종로구 삼청로 30 : 10:00–18:00</p>
+              <ul class="visual-list">
+                <li><a href="#">전시</a></li>
+                <li><a href="#">필름앤비디오</a></li>
+                <li><a href="#">다원예술</a></li>
+                <li><a href="#">교육</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </div>
+            <div class="visual-box">
+              <h4 class="visual-tit"><em>청주</em>현대 미술관</h4>
+              <p class="visual-desc">서울 종로구 삼청로 30 : 10:00–18:00</p>
+              <ul class="visual-list">
+                <li><a href="#">전시</a></li>
+                <li><a href="#">필름앤비디오</a></li>
+                <li><a href="#">다원예술</a></li>
+                <li><a href="#">교육</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </div>
+          </article>
+        </section>
       </main>
       <footer class="footer"></footer>
     </div>
